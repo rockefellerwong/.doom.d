@@ -34,13 +34,6 @@
 (setq org-directory "~/org/"
       org-ellipsis "⤵")
 
-(defun new-org-file-init ()
-  (interactive)
-  (when (equal "org" (file-name-extension buffer-file-name))
-    (insert (concat "#+STARTUP: latexpreview\n")
-    (insert "#+STARTUP: inlineimages\n"))))
-(add-hook 'find-file-not-found-hooks 'new-org-file-init)
-
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
